@@ -18,21 +18,21 @@
     $ritornoAlFuturo = new Movie('Ritorno al Futuro', 'Fantascienza', 'Inglese', "Ritorno al futuro (Back to the Future) è un film del 1985 diretto da Robert Zemeckis e interpretato da Michael J. Fox e Christopher Lloyd. Primo episodio della trilogia omonima, è considerato un'icona del cinema degli anni ottanta e ha riscosso un enorme successo a livello internazionale. La pellicola ha ricevuto il premio Oscar al miglior montaggio sonoro. Nel 2007 è stato scelto per essere conservato nel National Film Registry della Biblioteca del Congresso degli Stati Uniti. In occasione del suo 25º anniversario, il 27 ottobre 2010 il film è stato riproposto per un solo giorno nelle sale cinematografiche italiane, statunitensi e britanniche; la stessa cosa si è ripetuta il 21 ottobre 2015, in corrispondenza della data di viaggio verso il futuro dei protagonisti nel secondo capitolo della serie.", "ritorno-al-futuro.jpg");
     $armageddon = new Movie('Armageddon - Giudizio Finale', 'Fantascienza', 'Inglese', "Armageddon - Giudizio finale (Armageddon) è un film del 1998 diretto da Michael Bay. Negli Stati Uniti uscì il 1º luglio del 1998, mentre nelle sale italiane arrivò il 4 settembre dello stesso anno, preceduto da un'anteprima nelle principali località balneari il 14 agosto. È stato distribuito nei cinema circa due mesi dopo un altro film di fantascienza che tratta un argomento identico, Deep Impact.", "armageddon.jpg");
     
-    $loHobbit->addActor(new Actor('Martin', 'Freeman', 51));
-    $loHobbit->addActor(new Actor('Ian', 'McKellen', 83));
-    $loHobbit->addActor(new Actor('Richard', 'Armitage', 51));
-    $nottingHill->addActor(new Actor('Hugh', 'Grant', 62));
-    $nottingHill->addActor(new Actor('Julia', 'Roberts', 54));
-    $nottingHill->addActor(new Actor('Rhys', 'Ifans', 54));
-    $signoreDegliAnelli->addActor(new Actor('Elijah', 'Wood', 41));
-    $signoreDegliAnelli->addActor(new Actor('Ian', 'McKellen', 83));
-    $signoreDegliAnelli->addActor(new Actor('Liv', 'Tyler', 45));
-    $ritornoAlFuturo->addActor(new Actor('Michael J.', 'Fox', 61));
-    $ritornoAlFuturo->addActor(new Actor('Christopher', 'Lloyd', 84));
-    $ritornoAlFuturo->addActor(new Actor('Lea', 'Thompson', 61));
-    $armageddon->addActor(new Actor('Bruce', 'Willis', 67));
-    $armageddon->addActor(new Actor('Ben', 'Affleck', 50));
-    $armageddon->addActor(new Actor('Will', 'Patton', 68));
+    $loHobbit->addActor('Martin', 'Freeman', 51);
+    $loHobbit->addActor('Ian', 'McKellen', 83);
+    $loHobbit->addActor('Richard', 'Armitage', 51);
+    $nottingHill->addActor('Hugh', 'Grant', 62);
+    $nottingHill->addActor('Julia', 'Roberts', 54);
+    $nottingHill->addActor('Rhys', 'Ifans', 54);
+    $signoreDegliAnelli->addActor('Elijah', 'Wood', 41);
+    $signoreDegliAnelli->addActor('Ian', 'McKellen', 83);
+    $signoreDegliAnelli->addActor('Liv', 'Tyler', 45);
+    $ritornoAlFuturo->addActor('Michael J.', 'Fox', 61);
+    $ritornoAlFuturo->addActor('Christopher', 'Lloyd', 84);
+    $ritornoAlFuturo->addActor('Lea', 'Thompson', 61);
+    $armageddon->addActor('Bruce', 'Willis', 67);
+    $armageddon->addActor('Ben', 'Affleck', 50);
+    $armageddon->addActor('Will', 'Patton', 68);
 
     $films = [];
     array_push($films, $loHobbit);

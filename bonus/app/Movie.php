@@ -88,8 +88,9 @@ class Movie {
         return $this->actors;
     }
 
-    public function addActor($actor)
+    public function addActor($name, $lastname, $age)
     {
+        $actor = new Actor($name, $lastname, $age);
         $actors = $this->getActors();
         if ( !in_array($actor, $actors) )
             array_push($this->actors, $actor);
