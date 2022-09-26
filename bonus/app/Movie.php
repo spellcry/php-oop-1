@@ -1,4 +1,5 @@
 <?php
+include __DIR__ . '/Actor.php';
 
 class Movie {
     public $title;
@@ -6,6 +7,7 @@ class Movie {
     public $language;
     public $description;
     public $poster;
+    public $actors = [];
 
     public function __construct($title, $genre, $language, $description, $poster)
     {
@@ -78,4 +80,36 @@ class Movie {
         $this->poster = $poster;
     }
 
+    /**
+     * Get / Set the value of title
+     */ 
+    public function getActors()
+    {
+        return $this->actors;
+    }
+
+    public function addActor($actor)
+    {
+        $actors = $this->getActors();
+        if ( !in_array($actor, $actors) )
+            array_push($this->actors, $actor);
+    }
+    
+    public function delActor($actor) {
+        $actors = $this->getActors();
+        if ( in_array($actor, $actors) )
+            $pos = array_search($actor, $actors);
+            array_splice($this->actors, $pos, 1);
+    }
+
+    public function printActors() {
+        $actors = $this->getActors();
+        $stamp = '';
+        foreach ( $actors as $key => $actor ) {
+            $stamp .= $actor->getFullName() . ', ';
+            if ( $key == count($actors) - 1 )
+                $stamp .= $actor->getFullName();
+        }
+        return $stamp;
+    }
 }
