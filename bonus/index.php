@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP OOP 1</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <?php
@@ -39,23 +41,25 @@
     array_push($films, $ritornoAlFuturo);
     array_push($films, $armageddon);
     ?>
-    <div class="container">
-        <ul style="list-style-type: none;">
-            <?php
-            foreach ( $films as $film ) {
-                ?>
-                <li>
-                    <img src="./assets/<?= $film->poster ?>"><br>
-                    <?= $film->getTitle() ?><br>
-                    <?= $film->getGenre() ?><br>                    
-                    <?= $film->printActors() ?><br>                    
-                    <?= $film->getLanguage() ?><br>
-                    <?= $film->getDescription() ?>
-                </li>
+    <main class="main-content">
+        <div class="container">
+            <ul class="card-list">
                 <?php
-            }
-            ?>
-        </ul>
-    </div>
+                foreach ( $films as $film ) {
+                    ?>
+                    <li class="card">
+                        <img src="./assets/<?= $film->poster ?>"><br>
+                        <h3 class="title"><?= $film->getTitle() ?></h3>
+                        <p><span class="accent">Genere:</span> <?= $film->getGenre() ?></p>                    
+                        <p><span class="accent">Attori:</span> <?= $film->printActors() ?></p>
+                        <p><span class="accent">Lingua originale:</span> <?= $film->getLanguage() ?></p>
+                        <p><span class="accent">Descrizione:</span> <?= $film->getDescription() ?></p>
+                    </li>
+                    <?php
+                }
+                ?>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>
